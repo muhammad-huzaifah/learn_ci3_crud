@@ -9,4 +9,14 @@ class Siswa_model extends CI_Model
 	{
 		return $this->db->get($this->table)->result();
 	}
+
+    public function save($data)
+    {
+        return $this->db->insert($this->table, $data);
+    }
+
+    public function getById($id)
+    {
+        return $this->db->get_where($this->table, ["kd_siswa" => $id])->row();
+    }
 }
