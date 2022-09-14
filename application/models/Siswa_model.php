@@ -19,4 +19,5 @@ class Siswa_model extends CI_Model
     {
         return $this->db->get_where($this->table, ["kd_siswa" => $id])->row();
     }
+
 }
