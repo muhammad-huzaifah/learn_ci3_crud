@@ -20,4 +20,14 @@ class Siswa_model extends CI_Model
         return $this->db->get_where($this->table, ["kd_siswa" => $id])->row();
     }
 
+    public function update($data, $id)
+    {
+        return $this->db->update($this->table, $data, array('kd_siswa' => $id));
+    }
+
+    public function delete($id)
+    {
+        return $this->db->delete($this->table, array('kd_siswa' => $id));
+    }
+
 }
